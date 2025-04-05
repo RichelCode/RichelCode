@@ -9,7 +9,6 @@ I currently work with Python and R, and I enjoy building clean, insightful, and 
 ### Areas I’m interested in collaborating on:
 - Machine Learning and Deep Learning
 - Time Series Forecasting
-- Exploratory Data Analysis (EDA)
 - Model Deployment (Streamlit, Flask)
 - Data-driven decision-making projects
 
