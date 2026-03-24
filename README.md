@@ -1,19 +1,28 @@
-## Hi there, I’m Richel
+# Hi, I'm Richel Attafuah
 
-I’m a Master’s student in Statistics at Miami University, with a strong interest in Machine Learning, Deep Learning, and Time Series Analysis.
+I’m a Statistics graduate student at Miami University building machine learning and time-series solutions for transportation, energy, and public health.
 
-I’m passionate about using data to solve real-world problems and create impactful solutions, particularly in domains like health, energy, and transportation.
+## What I work on
+- Time-series forecasting and statistical modeling
+- Machine learning and deep learning for real-world decision-making
+- Reproducible research workflows in Python and R
+- Spatio-temporal modeling and applied data science
 
-I currently work with Python and R, and I enjoy building clean, insightful, and practical data science projects. I'm also currently enrolled in the Deep Learning Specialization by Andrew Ng.
+## Selected projects
+- **[Tech Stock Forecasting with GARCH Hybrids and Hierarchical Bayesian Models](https://github.com/RichelCode/Final_Stock_Analysis)**  
+  Research-focused forecasting pipeline combining econometric models, deep learning, and Bayesian partial pooling under walk-forward evaluation.
 
-### Areas I’m interested in collaborating on:
-- Machine Learning and Deep Learning
-- Time Series Forecasting
-- Model Deployment (Streamlit, Flask)
-- Data-driven decision-making projects
+- **[Traffic and EV Charging Demand Forecasting](https://github.com/RichelCode/EV-Charging-Analysis)**  
+  Spatio-temporal forecasting project using graph-based and deep learning models to predict traffic flow and EV charging demand.
 
-Let’s connect and collaborate on impactful work.
+- **[NYC Bike Demand Forecasting](https://github.com/RichelCode/Multi-Seasonal-Time-Series-Forecasting-of-NYC-Bike-Demand-SARIMA-vs-TBATS-vs-Fourier-ARIMA)**  
+  Comparative forecasting study using SARIMA, TBATS, and Fourier-ARIMA to model multi-seasonal bike demand.
 
-You can reach me on [LinkedIn](https://www.linkedin.com/in/richel-attafuah-931b46228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+## Tools
+`Python` `R` `Machine Learning` `Deep Learning` `Time Series` `Statistics` `Streamlit` `Flask`
 
+## Interests
+I’m especially interested in projects involving forecasting, model evaluation, deployment, and data-driven decision-making.
 
+## Connect
+- LinkedIn: [https://www.linkedin.com/in/richel-attafuah](https://www.linkedin.com/in/richelattafuah/)
