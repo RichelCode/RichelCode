@@ -8,16 +8,6 @@ I’m a Statistics graduate student at Miami University building machine learnin
 - Reproducible research workflows in Python and R
 - Spatio-temporal modeling and applied data science
 
-## Selected projects
-- **[Tech Stock Forecasting with GARCH Hybrids and Hierarchical Bayesian Models](https://github.com/RichelCode/Final_Stock_Analysis)**  
-  Research-focused forecasting pipeline combining econometric models, deep learning, and Bayesian partial pooling under walk-forward evaluation.
-
-- **[Traffic and EV Charging Demand Forecasting](https://github.com/RichelCode/EV-Charging-Analysis)**  
-  Spatio-temporal forecasting project using graph-based and deep learning models to predict traffic flow and EV charging demand.
-
-- **[NYC Bike Demand Forecasting](https://github.com/RichelCode/Multi-Seasonal-Time-Series-Forecasting-of-NYC-Bike-Demand-SARIMA-vs-TBATS-vs-Fourier-ARIMA)**  
-  Comparative forecasting study using SARIMA, TBATS, and Fourier-ARIMA to model multi-seasonal bike demand.
-
 ## Tools
 `Python` `R` `Machine Learning` `Deep Learning` `Time Series` `Statistics` `Streamlit` `Flask`
 
