@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Richel Attafuah</h1>
 
 <p align="center">
-  <b>Statistics alumna of Miami University </b><br>
+  <b> MSc Statistics alumna of Miami University </b><br>
   Building machine learning &amp; time-series solutions for <b>transportation</b>, <b>energy</b>, and <b>public health</b>.
 </p>
 
