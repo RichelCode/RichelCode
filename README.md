@@ -31,9 +31,9 @@ I work at the intersection of **time-series forecasting** and **applied machine 
 ### Spatio-Temporal Prediction & Coordination of EV-Charging Demand for Power-System Resilience
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/RichelCode/Spatio-Temporal-Prediction-and-Coordination-of-EV-Charging-Demand-for-Power-System-Resilience/main/paper_figures/top5_vs_actual_72h.png" width="720" alt="Top models vs actual flow over a 72-hour horizon">
+  <img src="assets/ev_72h_forecast.png" width="760" alt="72-hour forecast example: Actual vs Random Forest vs GraphWaveNet-GRU-LSTM">
 </p>
-<p align="center"><sub>Top models vs. actual demand over a 72-hour forecast horizon (real project output)</sub></p>
+<p align="center"><sub>72-hour forecast example — Actual vs. Random Forest vs. GraphWaveNet–GRU–LSTM (real project output)</sub></p>
 
 > Predicting *when* and *where* EV charging demand will arise by fusing spatio-temporal traffic features with deep learning — to support coordinated charging and a more resilient grid.
 
@@ -41,8 +41,7 @@ I work at the intersection of **time-series forecasting** and **applied machine 
      or commit a demo.gif and reference it like: ![Demo](assets/demo.gif) -->
 <p align="center">
   <a href="https://github.com/RichelCode/Spatio-Temporal-Prediction-and-Coordination-of-EV-Charging-Demand-for-Power-System-Resilience">
-    <img src="<img width="5046" height="1966" alt="image" src="https://github.com/user-attachments/assets/eaef7f80-2d78-4315-ab75-ea0995e9af63" />
-" alt="Demo video">
+    <img src="https://img.shields.io/badge/Watch_Demo-Coming_Soon-E74C3C?style=for-the-badge" alt="Demo video">
   </a>
 </p>
 
