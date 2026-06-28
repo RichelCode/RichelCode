@@ -41,7 +41,8 @@ I work at the intersection of **time-series forecasting** and **applied machine 
      or commit a demo.gif and reference it like: ![Demo](assets/demo.gif) -->
 <p align="center">
   <a href="https://github.com/RichelCode/Spatio-Temporal-Prediction-and-Coordination-of-EV-Charging-Demand-for-Power-System-Resilience">
-    <img src="https://img.shields.io/badge/Watch_Demo-Coming_Soon-E74C3C?style=for-the-badge" alt="Demo video">
+    <img src="<img width="5046" height="1966" alt="image" src="https://github.com/user-attachments/assets/eaef7f80-2d78-4315-ab75-ea0995e9af63" />
+" alt="Demo video">
   </a>
 </p>
 
