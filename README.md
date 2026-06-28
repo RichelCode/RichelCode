@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm Richel Attafuah</h1>
+<h1 align="center">Hi, I'm Richel Attafuah <img src="assets/bunny.gif" width="95" alt="cute bunny" /></h1>
 
 <p align="center">
   <b> MSc Statistics alumna of Miami University </b><br>
