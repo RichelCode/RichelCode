@@ -1,11 +1,13 @@
 <h1 align="center">Hi, I'm Richel Attafuah <img src="assets/bunny.gif" width="95" alt="cute bunny" /></h1>
 
 <p align="center">
-  <b> MSc Statistics alumna of Miami University </b><br>
-  Building machine learning &amp; time-series solutions for <b>transportation</b>, <b>energy</b>, and <b>public health</b>.
+  <b>AI/ML Engineer &amp; Data Scientist</b><br>
+  I build ML systems that hold up outside the notebook.<br>
+  <sub><i>Richel makes tech easy.</i></sub>
 </p>
 
 <p align="center">
+  <a href="https://richelcode.github.io"><img src="https://img.shields.io/badge/Portfolio-richelcode.github.io-0C2A4A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"></a>
   <a href="https://www.linkedin.com/in/richelattafuah/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="https://github.com/RichelCode"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
   <a href="mailto:richelattafuah@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
@@ -15,117 +17,77 @@
 
 ---
 
-## Focus Area
+## Featured Projects
 
-I work at the intersection of **time-series forecasting** and **applied machine learning**, turning spatial and temporal data into decisions that matter for real systems. My research connects **traffic dynamics, energy demand, and population health**, with an emphasis on:
+### Spatio-Temporal Prediction of EV Charging Demand
 
-- **Forecasting & statistical modeling** — SARIMA, TBATS, hierarchical reconciliation, deep sequence models
-- **Spatio-temporal modeling** — coupling spatial structure with temporal demand
-- **Applied ML & deep learning** — model evaluation, deployment, and data-driven decision-making
-- **Reproducible research** — clean, scalable pipelines in Python and R
+<p align="center">
+  <a href="https://richelcode.github.io/ev-charging-demand-demo/">
+    <img src="assets/ev-demo.gif" width="880" alt="Interactive dashboard: GraphWaveNet-GRU-LSTM vs Random Forest, with a sensor-outage slider showing the baseline's error diverging as sensors go dark">
+  </a>
+</p>
+
+Forecasts traffic flow **72 hours ahead across 1,821 Caltrans PeMS sensors** and maps it to EV charging load. The point isn't the clean-data score. It's what happens when the network degrades: **with 30% of sensors offline, the model holds 15.6% lower MAE than a Random Forest baseline, and stays more resilient at all 6 stations.** The baseline's error grows **2.8× faster** as sensors go dark, because the graph reconstructs a dead node from its neighbours while the baseline only sees a dead channel.
+
+**Method:** GraphWaveNet encoder + GRU/LSTM refinement over an adaptive adjacency matrix, evaluated at 12/24/48/72 h horizons, with up to **9.8% MAE improvement** over the base GraphWaveNet at long horizons.
+
+<p align="center">
+  <a href="https://richelcode.github.io/ev-charging-demand-demo/"><img src="https://img.shields.io/badge/Live_Demo-Interactive_Dashboard-E8A23D?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Demo"></a>
+  <a href="https://github.com/RichelCode/ev-charging-demand-demo"><img src="https://img.shields.io/badge/Demo_Repo-2E6FB8?style=for-the-badge&logo=github&logoColor=white" alt="Demo Repo"></a>
+  <a href="https://github.com/RichelCode/Spatio-Temporal-Prediction-and-Coordination-of-EV-Charging-Demand-for-Power-System-Resilience"><img src="https://img.shields.io/badge/Thesis_Repo-0C2A4A?style=for-the-badge&logo=github&logoColor=white" alt="Thesis Repo"></a>
+</p>
+
+**Stack:** `Python` · `PyTorch` · `GraphWaveNet` · `GRU / LSTM` · `Spatio-Temporal Graphs` · `NumPy` · `Gradio`
+
+<br>
+
+### Reading the Grid: Solar-Cell Fault Detection
+
+<p align="center">
+  <a href="https://huggingface.co/spaces/RichelCode/reading-the-grid">
+    <img src="assets/reading-the-grid.gif" width="880" alt="Live demo: selecting electroluminescence cell images, the model predicting faulty vs healthy with confidence, and a Grad-CAM heatmap in a drag-to-compare view">
+  </a>
+</p>
+
+Catches **85.4% of faulty solar cells** from electroluminescence scans (84.8% accuracy on a held-out split of 394 cells), and shows you *where* it looked: a Grad-CAM heatmap you drag against the original, so an inspector can confirm the call instead of trusting a bare label. Recall is prioritized over precision (71.4%) on purpose, because a fault missed in the field costs far more than a false alarm a human waves off in review.
+
+**Method:** ImageNet-pretrained ResNet18, fine-tuned on the ELPV dataset with a class-weighted loss. Unfreezing the last residual block lifted faulty recall from **0.72 to 0.85**. Ships as a single Docker container: a FastAPI inference server behind a React front end, deployed on Hugging Face Spaces.
+
+<p align="center">
+  <a href="https://huggingface.co/spaces/RichelCode/reading-the-grid"><img src="https://img.shields.io/badge/Live_Demo-Hugging_Face_Space-E8A23D?style=for-the-badge&logo=huggingface&logoColor=white" alt="Live Demo"></a>
+  <a href="https://github.com/RichelCode/reading-the-grid"><img src="https://img.shields.io/badge/Repo-0C2A4A?style=for-the-badge&logo=github&logoColor=white" alt="Repo"></a>
+</p>
+
+**Stack:** `PyTorch` · `ResNet18` · `Grad-CAM` · `FastAPI` · `React` · `TypeScript` · `Docker` · `Hugging Face Spaces`
 
 ---
 
-## Featured Projects
+## Other Work
 
-### Spatio-Temporal Prediction & Coordination of EV-Charging Demand for Power-System Resilience
-
-<p align="center">
-  <img src="assets/ev_72h_forecast.png" width="760" alt="72-hour forecast example: Actual vs Random Forest vs GraphWaveNet-GRU-LSTM">
-</p>
-<p align="center"><sub>72-hour forecast example — Actual vs. Random Forest vs. GraphWaveNet–GRU–LSTM (real project output)</sub></p>
-
-> Predicting *when* and *where* EV charging demand will arise by fusing spatio-temporal traffic features with deep learning — to support coordinated charging and a more resilient grid.
-
-<!-- TODO: replace with your demo video/GIF. Drag a .mp4 into a GitHub issue to get a hosted URL,
-     or commit a demo.gif and reference it like: ![Demo](assets/demo.gif) -->
-<p align="center">
-  <a href="https://github.com/RichelCode/Spatio-Temporal-Prediction-and-Coordination-of-EV-Charging-Demand-for-Power-System-Resilience">
-    <img src="https://img.shields.io/badge/Watch_Demo-Coming_Soon-E74C3C?style=for-the-badge" alt="Demo video">
-  </a>
-</p>
-
-- **Connects traffic dynamics with EV energy consumption** to anticipate charging needs in real time
-- Integrates **traffic flow, speed, and spatial patterns** into deep learning models for demand prediction
-- Lays the foundation for **coordinated charging strategies** that improve grid stability and EV integration in smart cities
-- Designed as a **scalable, reproducible framework** for robust prediction systems
-
-**Repo:** [Spatio-Temporal-Prediction-and-Coordination-of-EV-Charging-Demand](https://github.com/RichelCode/Spatio-Temporal-Prediction-and-Coordination-of-EV-Charging-Demand-for-Power-System-Resilience)
-
-**Stack:** `Python` · `Deep Learning` · `Spatio-Temporal Modeling` · `Time Series` · `Jupyter`
-
-<br>
-
-### Coherent Hourly Traffic-Flow Forecasting — Hierarchical Modeling & Reconciliation (R)
-
-<p align="center">
-  <img src="https://images.unsplash.com/photo-1754373218908-108881f8541f?auto=format&fit=crop&w=1200&h=380&q=80" width="720" alt="Aerial view of highway traffic">
-</p>
-<p align="center"><sub>Photo: <a href="https://unsplash.com/photos/aerial-view-of-a-highway-with-heavy-traffic-3FfoA-5IsA8">Unsplash</a></sub></p>
-
-> Forecasting hourly traffic flow with **hierarchical time-series reconciliation**, so forecasts stay coherent across aggregation levels.
-
-<!-- TODO: replace with your demo video/GIF -->
-<p align="center">
-  <a href="https://github.com/RichelCode/Coherent-Hourly-Traffic-Flow-Forecasting-Hierarchical-Modeling-and-Reconciliation-in-R">
-    <img src="https://img.shields.io/badge/Watch_Demo-Coming_Soon-E74C3C?style=for-the-badge" alt="Demo video">
-  </a>
-</p>
-
-- Builds a **hierarchy of traffic-flow series** and reconciles forecasts for consistency across levels
-- Compares forecasting approaches for **hourly, multi-seasonal** demand
-- Emphasizes **statistical rigor and reproducibility** in R
-
-**Repo:** [Coherent-Hourly-Traffic-Flow-Forecasting](https://github.com/RichelCode/Coherent-Hourly-Traffic-Flow-Forecasting-Hierarchical-Modeling-and-Reconciliation-in-R)
-
-**Stack:** `R` · `Hierarchical Time Series` · `Forecast Reconciliation` · `Statistics`
-
-<br>
-
-### Multi-Seasonal Forecasting of NYC Bike Demand — SARIMA vs TBATS vs Fourier-ARIMA
-
-<p align="center">
-  <img src="https://images.unsplash.com/photo-1684174603283-25a0667368ea?auto=format&fit=crop&w=1200&h=380&q=80" width="720" alt="Row of docked share bikes">
-</p>
-<p align="center"><sub>Photo: <a href="https://unsplash.com/photos/a-row-of-bicycles-parked-next-to-each-other-lVMvu8I8FsA">Unsplash</a></sub></p>
-
-> A head-to-head comparison of **multi-seasonal forecasting methods** on NYC bike-share demand.
-
-<!-- TODO: replace with your demo video/GIF -->
-<p align="center">
-  <a href="https://github.com/RichelCode/Multi-Seasonal-Time-Series-Forecasting-of-NYC-Bike-Demand-SARIMA-vs-TBATS-vs-Fourier-ARIMA">
-    <img src="https://img.shields.io/badge/Watch_Demo-Coming_Soon-E74C3C?style=for-the-badge" alt="Demo video">
-  </a>
-</p>
-
-- Benchmarks **SARIMA, TBATS, and Fourier-ARIMA** on real urban-mobility data
-- Handles **multiple overlapping seasonalities** (daily + weekly cycles)
-- Reports model evaluation to guide method selection for demand forecasting
-
-**Repo:** [Multi-Seasonal-Time-Series-Forecasting-of-NYC-Bike-Demand](https://github.com/RichelCode/Multi-Seasonal-Time-Series-Forecasting-of-NYC-Bike-Demand-SARIMA-vs-TBATS-vs-Fourier-ARIMA)
-
-**Stack:** `R` · `SARIMA` · `TBATS` · `Fourier-ARIMA` · `Time Series`
+- **Coherent Hourly Traffic-Flow Forecasting**: hierarchical modeling &amp; reconciliation in R, keeping forecasts coherent across aggregation levels · [repo](https://github.com/RichelCode/Coherent-Hourly-Traffic-Flow-Forecasting-Hierarchical-Modeling-and-Reconciliation-in-R)
+- **Multi-Seasonal Forecasting of NYC Bike Demand**: SARIMA vs TBATS vs Fourier-ARIMA on overlapping daily/weekly seasonalities in R · [repo](https://github.com/RichelCode/Multi-Seasonal-Time-Series-Forecasting-of-NYC-Bike-Demand-SARIMA-vs-TBATS-vs-Fourier-ARIMA)
+- **Published in *Scientific African* (2024)**: stochastic population growth model for national health &amp; labor planning in Ghana · [paper](https://www.sciencedirect.com/science/article/pii/S2468227624003831)
 
 ---
 
 ## Recognition
 
-- **2nd Runner-Up — StatsBank Hackathon**
+- **2nd Runner-Up, StatsBank Hackathon**
 - **First Class Honors Graduate** · 2nd Overall Outstanding Student Award (University of Ghana)
 - **ENAR Travel Award** · Diversity Mentorship Program Travel Award · PharmaSUG Award
-- **Lilly Leadership Institute (Cohort 14)** — first graduate student selected across Miami University
-- **Women in Statistics and Data Science Conference 2025** — presented spatio-temporal forecasting research
-- **Published in *Scientific African* (2024)** — [stochastic population growth model](https://www.sciencedirect.com/science/article/pii/S2468227624003831) for national health & labor planning in Ghana
+- **Lilly Leadership Institute (Cohort 14)**: first graduate student selected across Miami University
+- **Women in Statistics and Data Science Conference 2025**: presented spatio-temporal forecasting research
+- **Published in *Scientific African* (2024)**: [stochastic population growth model](https://www.sciencedirect.com/science/article/pii/S2468227624003831) for national health & labor planning in Ghana
 
 ---
 
 ## Teaching & Community
 
-- **Graduate Teaching Assistant, STA 261 (Miami University)** — supported 310+ students; weekly R & JMP labs, office hours averaging 15+ visits
-- **AI & Student Project Development Faculty Learning Community** — integrating AI tools into teaching across disciplines
-- **Social Media & Communications Lead, WiMLDS Accra** — amplifying opportunities for women in AI & ML
-- **Technical writer on [Medium](https://medium.com/@richelattafuah)** — Python, ML, and data science career content
-- **[YouTube channel](https://www.youtube.com/@richelattafuah23)** — Python & data science (68% avg watch-through, well above platform average)
+- **Graduate Teaching Assistant, STA 261 (Miami University)**: supported 310+ students; weekly R & JMP labs, office hours averaging 15+ visits
+- **AI & Student Project Development Faculty Learning Community**: integrating AI tools into teaching across disciplines
+- **Social Media & Communications Lead, WiMLDS Accra**: amplifying opportunities for women in AI & ML
+- **Technical writer on [Medium](https://medium.com/@richelattafuah)**: Python, ML, and data science career content
+- **[YouTube channel](https://www.youtube.com/@richelattafuah23)**: Python & data science (68% avg watch-through, well above platform average)
 
 ---
 
