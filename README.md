@@ -107,15 +107,4 @@ Catches **85.4% of faulty solar cells** from electroluminescence scans (84.8% ac
 
 ---
 
-## GitHub Activity
-
-<p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=RichelCode&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="Richel's GitHub stats">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RichelCode&layout=compact&theme=tokyonight&langs_count=8" alt="Top languages">
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=RichelCode&theme=tokyonight" alt="GitHub streak">
-</p>
-
 <p align="center"><i>Forecasting the future, one time step at a time.</i></p>
